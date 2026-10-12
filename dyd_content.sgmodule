@@ -1,7 +1,10 @@
 #!name=独阅读 VIP 正文代理
-#!desc=VIP 章正文经 Surge 本地并发拉取（段评接口）。书源发假链接 http://198.51.100.1:8788/chapter?bid=&cid= 即可。需开启 Surge 并允许模块。
+#!desc=VIP 章正文经 Surge 本地并发拉取（段评接口）。书源发假链接 http://198.51.100.1:8788/chapter?bid=&cid= 。需要开启 Surge MITM 并安装证书，模块自动声明 hostname。
 #!author=Minis
 #!system=ios
 
 [Script]
 独阅读正文 = type=http-request,pattern=^http://198\.51\.100\.1:8788/chapter(?:\?|$),requires-body=0,max-size=0,timeout=300,script-path=dyd_content.js,debug=0
+
+[MITM]
+hostname = 198.51.100.1
