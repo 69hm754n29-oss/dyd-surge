@@ -8,4 +8,4 @@
 独阅读正文 = type=http-request,pattern=^http://198\.51\.100\.1:8788/chapter(?:\?|$),requires-body=0,max-size=0,timeout=300,script-path=https://raw.githubusercontent.com/69hm754n29-oss/dyd-surge/main/dyd_content.js,script-update-interval=86400
 
 [MITM]
-hostname = 198.51.100.1
+hostname = %APPEND% 198.51.100.1
